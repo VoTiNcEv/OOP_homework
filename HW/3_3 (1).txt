@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+const double Pi = 3.1415926;
+
+class Point   //Создаём класс "круг"
+{
+	double m = 1;
+public:
+	double Rad;
+	double S();
+	double L();
+	double D();
+};
+
+int main()
+{
+	Point krug;
+	krug.Rad = 5;  //Задаём радиус равный пяти
+		cout << krug.D() << "\n"; //Выводит диаметр
+		cout << krug.S() << "\n"; //Выводит площадь круга
+		cout << krug.L() << "\n"; //Выводит длину дуги круга
+
+		system("pause");
+	return 0;
+}
+
+double Point::D()    //Реализация класса "круг", вычисление диаметра, площади и длины окружности
+{
+	return Rad * 2 * m;
+}
+
+double Point::S()
+{
+	return pow(Rad, 2) * Pi * m;
+}
+
+double Point::L()
+{
+	return Rad * Pi * 2 * m;
+}
+
+
+double Point::L()
+{
+	return Rad * Pi * 2 * m;
+}
